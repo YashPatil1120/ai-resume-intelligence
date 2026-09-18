@@ -1,0 +1,12 @@
+I am a software developer with experience in Python, React, Node.js and MongoDB.
+
+I have developed full stack web applications using React for frontend development
+and Node.js for backend development.
+
+I have experience building REST APIs, working with databases, Git and machine learning.
+
+I have also worked on a RAG chatbot using LangChain and large language models.
+
+I have 3 years of experience in software development.
+
+I have completed a Bachelor of Technology in Computer Science.

@@ -1,0 +1,18 @@
+Full Stack Software Developer
+
+Required Qualifications:
+- Bachelor's degree in Computer Science or Software Engineering.
+- At least 2 years of professional software development experience.
+- Strong programming experience with Python or Java.
+- Experience with React.js.
+- Experience with Node.js and Express.js.
+- Experience building and integrating RESTful APIs.
+- Experience working with MySQL or MongoDB.
+- Familiarity with Git and GitHub.
+
+Preferred Qualifications:
+- Experience with TypeScript.
+- Experience with Docker.
+- Familiarity with AWS.
+- Knowledge of Machine Learning or Artificial Intelligence.
+- Experience with PyTorch or OpenCV.
