@@ -10,9 +10,27 @@ from app.nlp.skill_extractor import find_skill_evidence
 # LOAD MODEL
 # ==================================================
 
-model = SentenceTransformer(
-    "all-MiniLM-L6-v2"
-)
+model = None
+
+
+def get_model():
+    """
+    Load the Sentence Transformer model only when it
+    is actually needed.
+
+    This is lazy loading. It prevents the ML model
+    from being loaded during FastAPI application startup.
+    """
+
+    global model
+
+    if model is None:
+
+        model = SentenceTransformer(
+            "all-MiniLM-L6-v2"
+        )
+
+    return model
 
 
 # ==================================================
@@ -95,12 +113,15 @@ def split_into_sentences(text):
 def create_embeddings(texts):
     """
     Convert text into sentence embeddings.
+
+    The model is loaded lazily only when embeddings
+    are actually required.
     """
 
     if not texts:
         return []
 
-    return model.encode(
+    return get_model().encode(
         texts
     )
 
@@ -215,7 +236,7 @@ def find_semantic_evidence(
             "semantic_query": semantic_query
         }
 
-    query_embedding = model.encode(
+    query_embedding = get_model().encode(
         [semantic_query]
     )
 
